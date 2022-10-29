@@ -112,7 +112,7 @@ def convert_csv(filename: str, output: str):
         bar()
         bar.text = "Saving as parquet, please wait..."
 
-        df.to_parquet(output, compression=None)
+        df.to_parquet(output)
         bar()
 
     logging.info(f"Indexed {len(df.index)} replays")

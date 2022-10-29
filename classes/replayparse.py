@@ -26,7 +26,7 @@ def parse_replays(df: pd.DataFrame):
             beatmap = slider.Beatmap.from_path(beatmap_path)
 
             for action in replay.actions:
-                x.y = action.position.x, action.position.y
+                x, y = action.position.x, action.position.y
 
         except Exception as e:
             skipped += 1
