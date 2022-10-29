@@ -75,7 +75,7 @@ def convert_csv(filename: str, output: str):
     bpm_max_cond = df["beatmap-BPMMax"] <= 700
     bpm_min_cond = df["beatmap-BPMMin"] >= 15
     ss_cond = df["performance-Accuracy"] == 1
-    mods_cond = df["mods"] & allowed_mods.bitwise
+    mods_cond = np.logical_or(df["mods"] == 0, df["mods"] & allowed_mods.bitwise)
 
     filter = conjugate_conds(
         star_rating_cond,

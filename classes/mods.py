@@ -5,6 +5,8 @@ from enum import Enum
 from functools import reduce
 from typing import Union
 
+__all__ = ["Mod", "Mods"]
+
 
 class Mod(Enum):
     """Bitwise Flags representing osu! mods."""
