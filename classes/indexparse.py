@@ -21,7 +21,7 @@ def convert_csv(filename: str, output: str):
     with alive_bar(3, dual_line=True, title="Indexing...") as bar:
         bar.text = "-> Reading CSV, please wait..."
 
-        df = pd.read_csv(filename, low_memory=False)
+        df = pd.read_csv(filename, engine="pyarrow")
         df = df.astype(
             {
                 "replayHash": str,
