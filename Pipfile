@@ -9,7 +9,8 @@ numpy = "*"
 pyarrow = "*"
 black = "*"
 fastparquet = "*"
-osrparse = "*"
+slider = "*"
+alive-progress = "*"
 
 [dev-packages]
 
